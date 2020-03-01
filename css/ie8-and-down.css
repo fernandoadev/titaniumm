@@ -1,0 +1,17 @@
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+ width:1170px !important;
+
+}
+
+.flex-direction-nav .flex-prev {
+position: absolute;
+left: 0px !important;
+bottom: 39% !important;
+}
+
+.flex-direction-nav .flex-next {
+position: absolute;
+right: 0px !important;
+bottom: 39% !important;
+}
+
