@@ -296,7 +296,7 @@ ul#navlist li.current a{
 
 .circle {
   text-align: center;
-  background: url(../images/diamond.png) center no-repeat #edc844; 
+  background: url(../images/1.png) center no-repeat #edc844; 
   border-radius: 50%;
   border: 8px solid transparent;
   padding: 80px;
@@ -311,12 +311,12 @@ ul#navlist li.current a{
 
 .circle:hover {
   border: 8px solid #edc844;
-  background: url(../images/diamond-hover.png) center no-repeat #2f3133;
+  background: url(../images/1-hover.png) center no-repeat #2f3133;
 }
 
 .circle2 {
   text-align: center;
-  background: url(../images/tv.png) center no-repeat #edc844; 
+  background: url(../images/2.png) center no-repeat #edc844; 
   border-radius: 50%;
   border: 8px solid transparent;
   padding: 80px;
@@ -331,12 +331,12 @@ ul#navlist li.current a{
 
 .circle2:hover {
   border: 8px solid #edc844;
-  background: url(../images/tv-hover.png) center no-repeat #2f3133;
+  background: url(../images/2-hover.png) center no-repeat #2f3133;
 }
 
 .circle3 {
   text-align: center;
-  background: url(../images/wallet.png) center no-repeat #edc844; 
+  background: url(../images/3.png) center no-repeat #edc844; 
   border-radius: 50%;
   border: 8px solid transparent;
   padding: 80px;
@@ -351,7 +351,7 @@ ul#navlist li.current a{
 
 .circle3:hover {
   border: 8px solid #edc844;
-  background: url(../images/wallet-hover.png) center no-repeat #2f3133;
+  background: url(../images/3-hover.png) center no-repeat #2f3133;
 }
 
 .box1 h4 {
@@ -364,15 +364,24 @@ ul#navlist li.current a{
 .box1 p {
   color: #808080;
   font-size: 16px;
-  height: 50px;
+  height: 100px;
   overflow: hidden;
   line-height: 24px;
 }
 
 .box1 a {
   text-transform: uppercase;
-  font-weight: lighter;
-  color: #808080;  
+  color: #00b601;  
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: table;
+    margin: auto;
+    white-space: normal;
+    padding: 15px 40px 15px;
+    text-transform: uppercase;
+    border: 2px solid black;
+
 }
 
 .box1 a:hover  {
@@ -520,7 +529,7 @@ ul#navlist li.current a{
 
 .features {
   padding: 110px 0 0px;
-    background:#fff url(../images/paralax2.jpg) top center fixed;
+    background:#fff url(../images/contato-paralax.jpg) top center fixed no-repeat ;
 }
 
 .features .feat-img img {
@@ -715,7 +724,7 @@ margin-bottom: -25px;
 /*Our Team*/
 
 .ourteam {
-  background: #f4f4f4;
+  background: white;
   padding: 100px 0 60px;
   border-top: 2px solid #dddddd;
 }
@@ -746,7 +755,7 @@ margin-bottom: -25px;
 
 .ourteam span.post-title {
   font-family: 'Lato';
-  font-size: 16px;
+  font-size: 18px;
   color: #808080;
   text-align: center;
   font-weight: lighter;
@@ -2044,10 +2053,11 @@ margin: auto;
 .inner-banner {
   max-width: 1170px;
   margin: auto;
+  text-align: center;
 }
 
 .banner h4 {
-  float: left;
+
   font-size: 25px;
   color: #2f3133;
   margin: 0;
