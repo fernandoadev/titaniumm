@@ -4266,6 +4266,9 @@ footer {
 }
 
 .inner-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 40px;
   padding-top: 10px;
 }
