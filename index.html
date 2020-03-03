@@ -28,6 +28,7 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.superfish.js"></script>
+	<script src="js/scriptindex.js"></script>
 
 
 
@@ -48,8 +49,10 @@
 
 <body>
 
-	<header>
-		<div class="subheader">
+	<header style="position: fixed; z-index: 100; width: 100%;">
+
+		<!--
+		<div class="subheader" >
 			<div class="wrapper">
 				<div class="left-sub">
 					<ul>
@@ -62,7 +65,7 @@
 
 			</div>
 		</div>
-
+ -->
 
 		<div class="upper-header">
 			<div class="wrapper">
@@ -73,11 +76,11 @@
 				<!-- Navigation -->
 				<div id="nav">
 					<ul id="navlist" class="sf-menu clearfix">
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a href="#">A Titaniumm</a></li>
-						<li><a href="#">Produtos</a></li>
-						<li><a href="#">Serviços</a></li>
-						<li><a href="#">Contato</a></li>
+						<li class="current"><a class="scrollSuave" href="#home">Home</a></li>
+						<li><a class="scrollSuave" href="#sobre">A Titaniumm</a></li>
+						<li><a class="scrollSuave" href="#produtos">Produtos</a></li>
+						<li><a class="scrollSuave" href="#">Serviços</a></li>
+						<li><a class="scrollSuave" href="#contato">Contato</a></li>
 					</ul>
 				</div>
 				<!-- Navigation -->
@@ -90,7 +93,7 @@
 	<!--header end-->
 
 	<!-- Slider -->
-	<div class="slider">
+	<div class="slider" id="home">
 		<div class="fullwidthbanner-container">
 			<div class="fullwidthbanner" id="intro">
 				<ul>
@@ -166,7 +169,7 @@
 
 
 
-	<div class="section1">
+	<div class="section1" id="sobre">
 
 		<div class="circles ourteam">
 
@@ -179,8 +182,8 @@
 						<h3>SOBRE A TITANIUMM</h3>
 						<p class="ourteam-subtitle">CONHEÇA UM POUCO SOBRE NÓS.</p>
 						<div class="border"></div>
-						<span class="post-title">A Titaniumm é forjada com uma experiência de <strong>##ANOS DE
-								MERCADO##</strong>, estamos sempre buscando por <strong>qualidade e
+						<span class="post-title">A Titaniumm é forjada com uma experiência de <strong>longos anos
+								no</strong>, estamos sempre buscando por <strong>qualidade e
 								durabilidade</strong> com nosso
 							produtos, <strong>essa é a nossa missão com os clientes</strong>, e também, estamos em
 							costante <strong>busca por
@@ -207,8 +210,10 @@
 									</div>
 									<h4><strong>EXPERIÊNCIA APLICADA</strong></h4>
 									<p>Em cada produto, buscamos aplicar todo nosso conhecimento adiquirido ao longo de
-										<strong>todos os ## anos de experiência</strong> no mercado.</p>
-									<a href="#">QUERO SABER MAIS</a>
+										<strong>todos esses anos de experiência</strong> no mercado.</p>
+									<a target="__blank"
+										href="https://api.whatsapp.com/send?phone=55199984504039&text=Ol%C3%A1%20meu%20nome%20%C3%A9%20(SEU%20NOME%20AQUI)%20e%20gostaria%20de%20saber%20(SUA%20MENSAGEM)">QUERO
+										SABER MAIS</a>
 								</div>
 							</div>
 							<div class="column4">
@@ -258,7 +263,7 @@
 		</div>
 		<!--/paralax1 end-->
 
-		<div class="responsive ourteam">
+		<div class="responsive ourteam" id="produtos">
 
 			<section>
 				<article>
@@ -329,15 +334,15 @@
 	</div>
 	<!--/section2 end-->
 
-	
+
 	<!--CONTACT-->
-	<div class="banner">
+	<div class="banner" id="contato">
 		<div class="inner-banner">
 			<h4>Contato</h4>
 			<div class="clear"></div>
 		</div>
 	</div>
-	
+
 	<div class="contactus">
 		<div class="wrapper dark">
 			<div class="map column5">
@@ -350,7 +355,7 @@
 			</div>
 			<div class="column7 contact-form">
 				<h3>Entre em contato</h3>
-				  <form id="contact-form" action="#">
+				<form id="contact-form" action="#">
 					<label>Seu nome *</label>
 					<input name="name" id="name" type="text">
 					<label>Email</label>
@@ -359,9 +364,9 @@
 					<input name="subject" id="subject" type="text">
 					<label>Mensagem</label>
 					<textarea name="comment" id="comment"></textarea>
-					  <input type="submit" value="Enviar"  id="submit_contact">
-					  <div id="msg" class="message"></div>
-				  </form>
+					<input type="submit" value="Enviar" id="submit_contact">
+					<div id="msg" class="message"></div>
+				</form>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -374,7 +379,7 @@
 			<div class="clear"> </div>
 		</div>
 	</div>
-		<!--CONTACT END-->
+	<!--CONTACT END-->
 
 	<footer>
 
@@ -408,7 +413,7 @@
 				<a href="#" class="tags">Minimalistic</a>
 				<a href="#" class="tags">Super Cool</a>
 			</div>
-			
+
 			<div class="column3 tweets">
 				<h4>Latest Tweets</h4>
 				<div id="example1"></div>

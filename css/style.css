@@ -129,7 +129,7 @@ color: #edc844;
 
 .logo {
   float: left;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 
@@ -145,7 +145,7 @@ color: #edc844;
 #nav {
   width: 760px;
   float: right;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 #nav select {
@@ -170,7 +170,7 @@ ul#navlist li a {
   display: block;
   font-size: 18px;
   line-height: normal;
-  color: #3e4042;
+  color: black;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
