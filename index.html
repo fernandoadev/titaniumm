@@ -43,57 +43,103 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
+	<!--LINKS para LIB materialize CSS-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+
+	<!--LINKS para LIB materialize JS e JQ-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+		integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+	<script language="javascript" src="http://malsup.github.io/jquery.cycle.all.js"></script>
+
+	<style type="text/css">
+		#sidenav-overlay {
+
+			z-index: -1 !important;
+
+		}
+
+
+		nav {
+
+			background-color: transparent !important;
+			box-shadow: none !important;
+			z-index: 1000;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 70px;
+
+		}
+
+		a.a-contratar {
+			color: black !important;
+			font-weight: 700 !important;
+		}
+
+		nav ul li {
+			padding: 25px 10px !important;
+		}
+
+		nav ul a {
+			display: block !important;
+			font-size: 18px !important;
+			line-height: normal !important;
+			color: white !important;
+			font-family: 'Montserrat', sans-serif !important;
+			text-transform: uppercase !important;
+			font-weight: bold !important;
+		}
+
+		nav ul a.black {
+			background-color: white !important;
+			color: black !important;
+		}
+
+		.right {
+			margin-left: 400px !important;
+			float: none !important;
+		}
+	</style>
 
 
 </head>
 
 <body>
 
-	<header style="position: fixed; z-index: 100; width: 100%;">
+	<nav id="menufa">
+		<div class="nav-wrapper header" id="header">
+			<a href="#" data-activates="menu-mobile" class="button-collapse">
+				<i class="material-icons">menu</i>
+			</a>
 
-		<!--
-		<div class="subheader" >
-			<div class="wrapper">
-				<div class="left-sub">
-					<ul>
-						<li><a href="#">E-mail: contato@titaniumm.com.br</a></li>
-						<li>Cel: 19 9 8450-4039</li>
-
-					</ul>
-				</div>
-
-
-			</div>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#home" class="scrollSuave">Inicio</a></li>
+				<li><a href="#sobre" class="scrollSuave">A Titaniumm</a></li>
+				<li><a href="#produtos" class="scrollSuave">Produtos</a></li>
+				<li><a href="#contato" class="scrollSuave">Contato</a></li>
+			</ul>
+			<ul class="side-nav" id="menu-mobile">
+				<li><a href="#home" class="scrollSuave black" onclick="closeNav()">Inicio</a></li>
+				<li><a href="#sobre" class="scrollSuave black" onclick="closeNav()">A Titaniumm</a></li>
+				<li><a href="#produtos" class="scrollSuave black" onclick="closeNav()">Produtos</a></li>
+				<li><a href="#contato" class="scrollSuave black" onclick="closeNav()">Contato</a></li>
+			</ul>
 		</div>
- -->
-
-		<div class="upper-header">
-			<div class="wrapper">
-				<div class="logo">
-					<a href="#"><img src="images/logo-t-black.png" alt="Titaniumm" height="30px"></a>
-				</div>
-
-				<!-- Navigation -->
-				<div id="nav">
-					<ul id="navlist" class="sf-menu clearfix">
-						<li class="current"><a class="scrollSuave" href="#home">Home</a></li>
-						<li><a class="scrollSuave" href="#sobre">A Titaniumm</a></li>
-						<li><a class="scrollSuave" href="#produtos">Produtos</a></li>
-						<li><a class="scrollSuave" href="#">Serviços</a></li>
-						<li><a class="scrollSuave" href="#contato">Contato</a></li>
-					</ul>
-				</div>
-				<!-- Navigation -->
-				<div class="clear"></div>
-			</div>
-		</div>
-		<!-- End Upper Header -->
-
-	</header>
+	</nav>
 	<!--header end-->
 
 	<!-- Slider -->
-	<div class="slider" id="home">
+	<div class="slider" id="home" style="height: auto !important;">
 		<div class="fullwidthbanner-container">
 			<div class="fullwidthbanner" id="intro">
 				<ul>
@@ -190,7 +236,7 @@
 								destaque</strong> no
 							segmento de arame e eponja em aço inox. </ANOS></span>
 
-						<div class="dark">
+						<div class="dark box1">
 
 							<div class="column4">
 								<div class="box1">
@@ -211,9 +257,7 @@
 									<h4><strong>EXPERIÊNCIA APLICADA</strong></h4>
 									<p>Em cada produto, buscamos aplicar todo nosso conhecimento adiquirido ao longo de
 										<strong>todos esses anos de experiência</strong> no mercado.</p>
-									<a target="__blank"
-										href="https://api.whatsapp.com/send?phone=55199984504039&text=Ol%C3%A1%20meu%20nome%20%C3%A9%20(SEU%20NOME%20AQUI)%20e%20gostaria%20de%20saber%20(SUA%20MENSAGEM)">QUERO
-										SABER MAIS</a>
+
 								</div>
 							</div>
 							<div class="column4">
@@ -226,6 +270,9 @@
 
 								</div>
 							</div>
+							<a target="__blank"
+								href="https://api.whatsapp.com/send?phone=55199984504039&text=Ol%C3%A1%20meu%20nome%20%C3%A9%20(SEU%20NOME%20AQUI)%20e%20gostaria%20de%20saber%20(SUA%20MENSAGEM)">QUERO
+								SABER MAIS</a>
 							<div class="clear"></div>
 						</div>
 					</div>
@@ -270,7 +317,7 @@
 					<div class="wrapper">
 						<h3>NOSSOS PRODUTOS</h3>
 						<div class="border"></div>
-						<div class="dark">
+						<div class="dark box1">
 							<div class="column5 resp-text">
 								<h4>ARAME PARA CERCA ELÉTRICA</h4>
 								<span>Mercury it is built to work on any screen, you wont have problems
@@ -283,6 +330,7 @@
 							<div class="column7 resp-img">
 								<img src="images/rolo-1.jpg" alt="Arame para cerca elétrica">
 							</div>
+							<a target="__blank" href="#">VER TABELA TÉCNICA</a>
 							<div class="clear"></div>
 
 						</div>
@@ -291,12 +339,7 @@
 					<div class="wrapper">
 
 						<div class="border"></div>
-						<div class="dark">
-
-							<div class="column7 resp-text">
-								<img src="images/esponja-1.jpg" alt="">
-							</div>
-
+						<div class="dark box1">
 
 							<div class="column5 resp-text">
 								<h4>ESPONJA EM AÇO INOX</h4>
@@ -307,6 +350,10 @@
 									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure
 									dolor .</p>
 							</div>
+							<div class="column7 resp-img">
+								<img src="images/esponja-1.jpg" alt="">
+							</div>
+							<a target="__blank" href="#">VER TABELA TÉCNICA</a>
 							<div class="clear"></div>
 
 

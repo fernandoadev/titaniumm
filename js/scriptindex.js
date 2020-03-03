@@ -1,10 +1,10 @@
 //Função esconde/mostra menu ao rolar
    $(function () {
     jQuery(window).scroll(function () {
-     if (jQuery(this).scrollTop() > 640) {
-      $(".upper-header").css('background-color', 'rgba(255, 255, 255, 0.6)');
+     if (jQuery(this).scrollTop() > 570) {
+      $(".header").css('background-color', 'rgba(0, 0, 0, 0.5)');
      } else {
-      $(".upper-header").css('background-color', 'rgba(0,213,236,0)');
+      $(".header").css('background-color', 'rgba(0,213,236,0)');
      }
     });
    });
@@ -22,3 +22,14 @@
         );
     });
   });
+
+//FUNÇÃO QUE ESCONDE MENU AO CLICAR EM BOTÃO NA VERSÃO MOBILE
+$(function () {
+    $(".button-collapse").sideNav();
+  });
+  
+  function closeNav() {
+    
+    $(".button-collapse").sideNav('hide');
+  
+  }
