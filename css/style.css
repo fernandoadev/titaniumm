@@ -19,6 +19,16 @@
 /* =  General
 /*-------------------------------------------------*/
 
+.box1 a.a-padding {
+  padding: 15px 20px 15px !important;
+}
+.a-wpp:hover {
+
+  box-shadow: 0px 0px 0px 3px #00b601;
+  transition: ease-in-out 300ms;
+
+}
+
 .clearfix {
   *zoom: 1;
 }

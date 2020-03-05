@@ -33,3 +33,12 @@ $(function () {
     $(".button-collapse").sideNav('hide');
   
   }
+
+
+
+  //ABRINDO MODAL MATERIALIZE
+$(document).ready(function(){
+
+  $('.modal').modal();
+
+});
