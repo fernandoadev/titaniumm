@@ -736,7 +736,7 @@
 	.box1 p {
 	color: #808080;
 	font-size: 16px;
-	height: 50px;
+	height: auto;
 	overflow: hidden;
 	line-height: 24px;
 	}
@@ -1162,7 +1162,10 @@ font-weight: bold;
 display: table;
 margin: auto;
 white-space: normal;
+/*
 padding: 25px 40px 15px;
+*/
+padding: 10px;
 text-transform: uppercase;
 border: 2px solid #fff;
 margin-top: 20px;

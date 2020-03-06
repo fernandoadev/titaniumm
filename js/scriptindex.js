@@ -1,7 +1,7 @@
 //Função esconde/mostra menu ao rolar
    $(function () {
     jQuery(window).scroll(function () {
-     if (jQuery(this).scrollTop() > 570) {
+     if (jQuery(this).scrollTop() > 550) {
       $(".header").css('background-color', 'rgba(0, 0, 0, 0.5)');
      } else {
       $(".header").css('background-color', 'rgba(0,213,236,0)');
