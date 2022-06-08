@@ -19,6 +19,24 @@
 /* =  General
 /*-------------------------------------------------*/
 
+#mail{
+  background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+    width: 100%;
+    border: 1px solid #e9e8e6;
+    padding: 12px 0;
+    margin-bottom: 20px;
+}
+.input-msg-form{
+  height: 7rem !important;
+}
 .box1 a.a-padding {
   padding: 15px 20px 15px !important;
 }

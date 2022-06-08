@@ -3,19 +3,19 @@
 	/* ==========================  Define variables ========================== */
 
 	#Your e-mail address
-	define("__TO__", "a.bublaku@gmail.com");
+	define("__TO__", "fernandoa.code@gmail.com");
 
 	#Message subject
 	define("__SUBJECT__", "");
 
 	#Success message
-	define('__SUCCESS_MESSAGE__', "Your message has been sent. Thank you!");
+	define('__SUCCESS_MESSAGE__', "Sua mensagem foi enviada com sucesso, logo entraremos em contato!");
 
 	#Error message 
-	define('__ERROR_MESSAGE__', "Error, your message hasn't been sent");
+	define('__ERROR_MESSAGE__', "Não foi possível enviar sua mensagem, tenta novamente mais tarde!");
 
 	#Messege when one or more fields are empty
-	define('__MESSAGE_EMPTY_FILDS__', "Please fill out  all fields");
+	define('__MESSAGE_EMPTY_FILDS__', "Por favor, preencha todos os campos");
 
 	/* ========================  End Define variables ======================== */
 
@@ -28,30 +28,19 @@
 		}
 	}
 
-	//Check e-mail validation
-	function check_email($email){
-		if(!@eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)){
-			return false;
-		} else {
-			return true;
-		}
-	}
 
 	//Get post data
-	if(isset($_POST['name']) and isset($_POST['mail']) and isset($_POST['comment'])){
-		$name 	 = $_POST['name'];
-		$mail 	 = $_POST['mail'];
-		$website  = $_POST['website'];
-		$comment = $_POST['comment'];
+	if(isset($_POST['nome']) and isset($_POST['email']) and isset($_POST['mensagem'])){
+		$name 	 = $_POST['nome'];
+		$mail 	 = $_POST['email'];
+		$website  = 'http://www.titaniumm.com.br/';
+		$comment = $_POST['mensagem'];
 
 		if($name == '') {
-			echo json_encode(array('info' => 'error', 'msg' => "Please enter your name."));
-			exit();
-		} else if($mail == '' or check_email($mail) == false){
-			echo json_encode(array('info' => 'error', 'msg' => "Please enter valid e-mail."));
+			echo json_encode(array('info' => 'error', 'msg' => "Por favor insira seu nome."));
 			exit();
 		} else if($comment == ''){
-			echo json_encode(array('info' => 'error', 'msg' => "Please enter your message."));
+			echo json_encode(array('info' => 'error', 'msg' => "Por favor digite sua mensagem."));
 			exit();
 		} else {
 			//Send Mail
@@ -65,7 +54,7 @@
 			<body>
 			  <table style="width: 500px; font-family: arial; font-size: 14px;" border="1">
 				<tr style="height: 32px;">
-				  <th align="right" style="width:150px; padding-right:5px;">Name:</th>
+				  <th align="right" style="width:150px; padding-right:5px;">Nome:</th>
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $name .'</td>
 				</tr>
 				<tr style="height: 32px;">
@@ -73,11 +62,11 @@
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $mail .'</td>
 				</tr>
 				<tr style="height: 32px;">
-				  <th align="right" style="width:150px; padding-right:5px;">subject:</th>
+				  <th align="right" style="width:150px; padding-right:5px;">Assunto:</th>
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $subject .'</td>
 				</tr>
 				<tr style="height: 32px;">
-				  <th align="right" style="width:150px; padding-right:5px;">Comment:</th>
+				  <th align="right" style="width:150px; padding-right:5px;">Mensagem:</th>
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $comment .'</td>
 				</tr>
 			  </table>

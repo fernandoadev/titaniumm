@@ -242,31 +242,37 @@ $(document).ready(function($) {
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
 
-	var submitContact = $('#submit_contact'),
-		message = $('#msg');
-
-	submitContact.on('click', function(e){
-		e.preventDefault();
-
-		var $this = $(this);
-		
-		$.ajax({
-			type: "POST",
-			url: 'contact.php',
-			dataType: 'json',
-			cache: false,
-			data: $('#contact-form').serialize(),
-			success: function(data) {
-
-				if(data.info !== 'error'){
-					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
-					message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				} else {
-					message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				}
-			}
-		});
+//AJAX para cadastrar nova ONG
+$("#contact-form").on("submit", function (event) {
+	//Quando clicar no botão do form #insert_form
+	event.preventDefault();
+	var url = jQuery(".enderecoFormMsg").attr("data-enderecocad"); //Endereço da controller
+	//alert(url);
+	var items = $("#" + this.id + " input").serializeArray();
+	var data = new FormData();
+	for (item in items) {
+	  data.append(items[item]["name"], items[item]["value"]);
+	}
+	//alert(url);
+	$.ajax({
+	  type: "POST",
+	  dataType: "json",
+	  url: url,
+	  data: data,
+	  contentType: false,
+	  processData: false,
+	  success: function (retorna) {
+		if (retorna["success"]) {
+		  console.log("Sucesso");
+		  $("#msg").html(retorna["msg"]);
+		} else {
+		  console.log(retorna["erro"]);
+		  console.log("Erro");
+		  $("#msg").html(retorna["msg"]);
+		}
+	  },
 	});
+  });
 
 	/* ---------------------------------------------------------------------- */
 	/*	Login
