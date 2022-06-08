@@ -264,11 +264,11 @@ $("#contact-form").on("submit", function (event) {
 	  success: function (retorna) {
 		if (retorna["success"]) {
 		  console.log("Sucesso");
-		  $("#msg").html(retorna["msg"]);
+		  $("#msg").html(retorna["msg"]).css('color', 'red');
 		} else {
 		  console.log(retorna["erro"]);
 		  console.log("Erro");
-		  $("#msg").html(retorna["msg"]);
+		  $("#msg").html(retorna["msg"]).css('color', 'green');
 		}
 	  },
 	});
